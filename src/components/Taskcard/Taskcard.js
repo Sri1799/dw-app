@@ -9,8 +9,7 @@ const Taskcard = ({taskItem, removeFromTaskList}) => {
         <div>
             {
                 <div className='card-container' 
-                taskId={taskItem.task}
-                categoryId={taskItem.category}
+                categoryid={taskItem.category}
                 style={{backgroundColor:(taskItem.category==='DW')?('red'):('white'), color:'black'}}>
                     <div className='card-content'>
                         <div className='card-title'>
@@ -31,11 +30,12 @@ const Taskcard = ({taskItem, removeFromTaskList}) => {
                             </button>
                         </div>
 
-                        <div className='btn'>
+                        <div className='btn' taskid={taskItem.task}>
                             <button 
                             onClick={(e) => {
-                            removeFromTaskList(e.target.parentElement.parentElement.parentElement.parentElement.getAttribute('taskId'))}}>
-                                <a> R </a>
+                            // console.log(e.target.parentElement)
+                            removeFromTaskList(e.target.parentElement.getAttribute('taskid'))}}>
+                                R
                             </button>
                         </div>
                     </div>

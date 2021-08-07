@@ -6,8 +6,6 @@ import Taskcard from '../Taskcard/Taskcard';
 
 const Tasklist = ({taskList, removeFromTaskList}) => {
 
-    console.log(taskList)
-
     const darkTheme = createTheme({
         palette: {
           primary:{

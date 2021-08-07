@@ -18,7 +18,7 @@ function App() {
     taskItem.task = task
     taskItem.category = category 
     
-    var prev_taskList = [...taskList]
+    var prev_taskList = taskList
     prev_taskList.push(taskItem)
     setTaskList(prev_taskList)
     setTask('')
@@ -26,11 +26,9 @@ function App() {
 
   var removeFromTaskList = (taskId) => {
     const index = taskList.findIndex(taskItem => taskItem.task === taskId)
-    console.log(taskId)
     var taskList_temp = [...taskList]
     taskList_temp.splice(index, 1)
     setTaskList(taskList_temp)
-    console.log(taskList)
   }
 
   return (
