@@ -17,7 +17,7 @@
 
 @media (max-width: 900px){
     .taskList{
-        height: 60vh;
+        height: 50vh;
         overflow-x: hidden;
         overflow-y: scroll;
     }
