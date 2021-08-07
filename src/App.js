@@ -27,8 +27,10 @@ function App() {
   var removeFromTaskList = (taskId) => {
     const index = taskList.findIndex(taskItem => taskItem.task === taskId)
     var taskList_temp = [...taskList]
-    taskList_temp.splice(index, 1)
-    setTaskList(taskList_temp)
+    if(index != -1){
+      taskList_temp.splice(index, 1)
+      setTaskList(taskList_temp)
+    }
   }
 
   return (
